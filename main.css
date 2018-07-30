@@ -33,11 +33,11 @@ body {
   z-index: 2;
 }
 
-.nav > .nav-header {
+.nav > .navbar-header {
     display: inline;
 }
 
-.nav > .nav-header > .nav-title {
+.nav > .navbar-header > .nav-title {
     display: inline-block;
     font-size: 25px;
     color: #fff;

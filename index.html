@@ -7,17 +7,18 @@
     <title>vidSaver</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://addons.thunderbird.net/user-media/addon_icons/151/151188-64.png?modified=1452388806" type="image/gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
     <body>
         <div class="nav">
-            <div class="nav-header">
+            <div class="navbar-header">
                 <form class="nav-title">
                     <label>vidSaver</label>
-                    <input class="input item" oninvalid="this.setCustomValidity('Please enter valid YouTube URL')" id="item" type="text" placeholder="Paste YouTube URL Here" pattern="(?:https?:\/\/)?(?:youtu\.be\/|((?:m\.)|(?:www\.))?youtube\.com\/watch(?:\.php)?\?.*v=)([a-zA-Z0-9\-_]+)(\?t=[a-z0-9]+)?" required >
+                    <input class="input item" id="item" type="text" placeholder="Paste YouTube URL Here" pattern="(?:https?:\/\/)?(?:youtu\.be\/|((?:m\.)|(?:www\.))?youtube\.com\/watch(?:\.php)?\?.*v=)([a-zA-Z0-9\-_]+)(\?t=[a-z0-9]+)?" required >
                     <br>
                     <input class="right" type="submit" value="Post">
-                    <button><span class="glyphicon glyphicon-star"></span>Clear All</button>
+                    <button id="clear">Clear All</button>
                 </form>
             </div>
             <div class="nav-btn">
@@ -35,7 +36,7 @@
                     and you can load it back up again with more videos!</p>
             </div>
         </div>
-        <ul class="listing">
+        <ul class="listing" id="list">
         </ul>
         <script src="main.js"></script>
     </body>
