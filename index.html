@@ -6,22 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>vidSaver</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://addons.thunderbird.net/user-media/addon_icons/151/151188-64.png?modified=1452388806" type="image/gif">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
-
     <body>
         <div class="nav">
             <div class="nav-header">
                 <form class="nav-title">
                     <label>vidSaver</label>
-                    <input class="input item" id="item" type="text" placeholder="Paste YouTube URL Here" pattern="(?:https?:\/\/)?((?:www\.)?youtube\.com\/watch(?:\.php)?\?.*v=)([a-zA-Z0-9\-_]+)" required >
-                    <input type="submit" value="Post">
+                    <input class="input item" oninvalid="this.setCustomValidity('Please enter valid YouTube URL')" id="item" type="text" placeholder="Paste YouTube URL Here" pattern="(?:https?:\/\/)?(?:youtu\.be\/|((?:m\.)|(?:www\.))?youtube\.com\/watch(?:\.php)?\?.*v=)([a-zA-Z0-9\-_]+)(\?t=[a-z0-9]+)?" required >
+                    <br>
+                    <input class="right" type="submit" value="Post">
+                    <button><span class="glyphicon glyphicon-star"></span>Clear All</button>
                 </form>
-                <button>Clear All</button>
             </div>
-        </div>
-        <div class="nutso">
-            <p>ekwkjf sjf sjf sjfs fsjf sdjfsjf sthe go is sht e the s ai aahs df ha a  aThe url must be in the format like this, not this The url must be in the format like this, not this The url must be in the format like this, not this The url must be in the format like this, not this</p>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span class="white">Info</span>
+                </label>
+            </div>
+            <input type="checkbox" id="nav-check">
+            <div class="nav-links">
+                <p><strong class="big">vidSaver</strong> lets you save YouTube videos to your device without the need to have an account. 
+                    Just paste a YouTube URL at the top, click "Post" and your video will be added to the page. 
+                    When you finish watching your videos, you can click "Clear All", all of the videos will be removed
+                    and you can load it back up again with more videos!</p>
+            </div>
         </div>
         <ul class="listing">
         </ul>

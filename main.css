@@ -4,57 +4,134 @@
 
 body {
     background-color: rgb(252, 240, 223);
-}
-
-.nutso {
-    padding-top: 30px;
-}
-
-p {
-    width: 100%;
-    border: 1px black solid;
-    background-color: teal;
+    background-image: url('http://icons-for-free.com/icon/download-play_youtube_icon-429752.png');
 }
 
 .listing {
-    padding-top: 5px;
+    padding-top: 75px;
     list-style: none;
     margin: 1em;
     display: grid;
     grid-gap: 1em;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
   }
 
-  .listing li {
-      box-shadow: 1px 1px 5px #a5a4a2fb;
-  }
+.listing li {
+    box-shadow: 1px 1px 5px #a5a4a2fb;
+}
 
 /*-----NAV BAR start------------*/
 
-  .nav {
-  height: 50px;
-  width: 100%;
+.nav {
+  height: 75px;
+  width: 98%;
   background-color: #4d4d4d;
   position: fixed;
+  border-radius: 5px;
   top: 0;
-  opacity: .9;
   z-index: 2;
 }
 
 .nav > .nav-header {
-  display: inline;
+    display: inline;
 }
 
 .nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 25px;
-  color: #fff;
-  padding: 10px;
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px;
 }
 
 .input {
-  width: 150px;
+    width: 200px;
+}
+
+.right {
+    margin-left: 95px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+  
+.nav > .nav-links > p {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+  
+.nav > .nav-links > p:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+  
+.nav > #nav-check {
+    display: none;
+}
+
+.white {
+    color: white;
+}  
+
+.nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px;
+}
+.nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+}
+.nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+}
+
+.nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px; 
+}
+  
+.nav > .nav-links > p {
+    display: block;
+    width: 100%; 
+}
+
+.nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+}
+
+.nav > #nav-check:checked + .nav-links {
+    height: 250px;
+    overflow-y: auto;
+}
+
+.big {
+    font-size: 30px;
 }
 
 /*---------NAV BAR end----------*/

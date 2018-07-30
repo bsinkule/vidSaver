@@ -13,8 +13,19 @@ const liMaker = (text) => {
   li.classList.add('if');
   const vid = document.createElement('iframe');
   vid.classList.add('bonk');
+
+  if(text.indexOf('m.') !== -1){
+    text = text.replace('m.', '')
+  }
+  let cow = 'www.youtube.com/watch?v='
+  let it = 'youtu.be/'
+  if(text.indexOf(it) !== -1){
+    text = text.replace(it, cow)
+  } 
+   
   text = text.replace('watch?v=', 'embed/');
   vid.src = text;
+  vid.setAttribute('allowFullScreen', '')
   li.appendChild(vid);
   ul.insertBefore(li, ul.childNodes[0]);
 }
